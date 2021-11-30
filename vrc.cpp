@@ -42,6 +42,5 @@ int main()
    int asci=alfa;
    cout<<asci<<endl;
     decToBinary(asci);
-
     return 0;
 }
