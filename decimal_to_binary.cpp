@@ -1,47 +1,19 @@
 #include <iostream>
 using namespace std;
-
-void decToBinary(int n){
-
-    int binaryNum[32];
-
-    int i = 0,count=0,bit=0;
-
-    while (n > 0) {
-        binaryNum[i] = n % 2;
-        n = n / 2;
-        i++;
-
-    }
-    
- 	for (int j = i - 1; j >= 0; j--)
- 	{
- 	 if(binaryNum[j]==1)
- 	  {  
- 	  count++;
-  		}
- 	 }
- 	 cout<<"count : "<<count<<endl;
- 	 if(count%2 !=0)
- 	 {
- 	 	bit=1;
-	  }
-	  cout<<"bits : ";
-    for (int j = i - 1; j >= 0; j--)
-		{
-		
-        cout << binaryNum[j];
-    }
-   cout<<bit;
-}
- 
 int main()
 {
-   char alfa ;
-   cin>>alfa;
-   int asci=alfa;
-   cout<<asci<<endl;
-    decToBinary(asci);
-
-    return 0;
+    cout << "This Program is made by Mandvi\n";
+    int a[10], n, i;
+    cout << "Enter the number to convert: ";
+    cin >> n;
+    for (i = 0; n > 0; i++)
+    {
+        a[i] = n % 2;
+        n = n / 2;
+    }
+    cout << "Binary of the given number= ";
+    for (i = i - 1; i >= 0; i--)
+    {
+        cout << a[i];
+    }
 }
